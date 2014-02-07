@@ -17,9 +17,23 @@ angular.module('myApp.directives', []).
     };
   }])
 
+  .directive('exSimpleAE', [function () {
+    return {
+      restrict: 'AE',
+      template: 'works in elements (e) or attributes (a)'
+    };
+  }])
+
   .directive('exSimpleTemplateUrl', [function () {
     return {
       restrict: 'E',
       templateUrl: 'templates/ex-simple-template-url.html'
-    }
+    };
+  }])
+
+  .directive('exCompiled', [function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/ex-compiled.html'
+    };
   }]);

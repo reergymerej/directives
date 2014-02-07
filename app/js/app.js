@@ -15,6 +15,14 @@ config(['$routeProvider', function($routeProvider) {
     controller: 'SimpleCtrl'
   });
 
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/', {
+    templateUrl: 'partials/index.html'
+  });
+
+  $routeProvider.when('/compiled', {
+    templateUrl: 'partials/compiled.html',
+    controller: 'CompiledCtrl'
+  });
+
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
