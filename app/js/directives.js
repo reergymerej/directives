@@ -36,4 +36,23 @@ angular.module('myApp.directives', []).
       restrict: 'E',
       templateUrl: 'templates/ex-compiled.html'
     };
+  }])
+
+  .directive('exCompiledFn', [function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/ex-compiled-fn.html'
+    };
+  }])
+
+  .directive('exCompiledFnScope', [function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/ex-compiled-fn-scope.html',
+      scope: {
+        a: '=',
+        b: '=c',
+        x: '=c'
+      }
+    };
   }]);

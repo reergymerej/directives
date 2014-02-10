@@ -1,0 +1,47 @@
+<h3>ex-compiled-fn-scope</h3>
+<section>
+	<h4>controller</h4>
+	<pre>
+$scope.foo = 'I am defined in the controller\'s scope.';
+
+$scope.bar = function () {
+	$scope.barTest = '$scope.bar in the controller set $scope.barTest to this string.';
+};
+
+$scope.barTest = '';
+
+$scope.a = 'AAA';
+$scope.b = 'BBB';
+$scope.c = 'CCC';
+	</pre>
+
+	<h4>directive reference in template</h4>
+	<div>&lt;ex-compiled-fn-scope horse="foo"&gt;&lt;/ex-compiled-fn-scope&gt;</div>
+
+	<h4>directive</h4>
+	<pre>
+return {
+  restrict: 'E',
+  templateUrl: 'templates/ex-compiled-fn-scope.html',
+  scope: {
+    donkey: '=horse'
+  }
+};
+	</pre>
+
+	<button ng-click="bar()">call function in controller with ng-click="bar()"</button>
+	<p>Scope variable barTest: {{ barTest }}</p>
+	<p>Since this directive has isolated scope, we cannot access the controller's scope. <strong>foo: {{ foo }}</strong></p>
+	
+
+	<h4>scope variables</h4>
+	<p>in controller: $scope.a = 'AAA'; $scope.b = 'BBB'; $scope.c = 'CCC';<p>
+	<p>in directive: scope: { a: '=', b: '=c', x: '=c' };</p> 
+	<p>in view: &lt;ex-compiled-fn-scope <strong>a="b" b="foo" c="c"</strong>&gt;&lt;/ex-compiled-fn-scope&gt;</p>
+	<ul>
+		<li>a: {{ a }}</li>
+		<li>b: {{ b }}</li>
+		<li>c: {{ c }}</li>
+		<li>x: {{ x }}</li>
+	</ul>
+</section>
