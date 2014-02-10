@@ -20,4 +20,10 @@ angular.module('myApp.controllers', [])
     $scope.a = 'AAA';
     $scope.b = 'BBB';
     $scope.c = 'CCC';
+  }])
+
+  .controller('IsolatedCtrl', ['$scope', function ($scope) {
+    $scope.a = 'aaa';
+    $scope.b = 'bbb';
+    $scope.c = 'ccc';
   }]);

@@ -1,0 +1,35 @@
+<h2>Isolated Scope</h2>
+<h3>controller scope vars</h3>
+<ul>
+	<li>$scope.a = 'aaa';</li>
+    <li>$scope.b = 'bbb';</li>
+    <li>$scope.c = 'ccc';</li>
+</ul>
+<h3>directive reference in view</h3>
+&lt;ex-isolated <span class="red">a="b"</span> x="c" y="z" &gt;&lt;/ex-isolated&gt;
+
+
+<p>The view has access to its variables.</p>
+<ul>
+	<li>a: {{ a }}</li>
+    <li>b: {{ b }}</li>
+    <li>c: {{ c }}</li>
+</ul>
+
+<p>The directive maps its scope variables with<p>
+<div>
+scope: {<br>
+  // make a available in the directive's scope
+  and map it to the controller's variable specified
+  by the attribute a<br />
+  <span class="red">a: '=',</span><br/>
+
+  // make foo available in the directive's scope
+  // and map it to the controller's variable specified
+  // by the attribute x
+  foo: '=x'
+}
+</div>
+
+
+<ex-isolated a="b" x="c" y="z"></ex-isolated>

@@ -55,4 +55,15 @@ angular.module('myApp.directives', []).
         x: '=c'
       }
     };
+  }])
+
+  .directive('exIsolated', [function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/ex-isolated.html',
+      scope: {
+        a: '=',
+        foo: '=x'
+      }
+    };
   }]);

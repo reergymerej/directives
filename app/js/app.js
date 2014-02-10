@@ -24,5 +24,10 @@ config(['$routeProvider', function($routeProvider) {
     controller: 'CompiledCtrl'
   });
 
+  $routeProvider.when('/isolated', {
+    templateUrl: 'partials/isolated.html',
+    controller: 'IsolatedCtrl'
+  });
+
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
