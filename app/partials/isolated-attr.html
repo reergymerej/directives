@@ -1,0 +1,11 @@
+<p>Can we make a directive that, when used as an attribute, injects scope variables from the controller into the directive's template?</p>
+<div>
+controller $scope.a: {{ a }}<br/>
+controller $scope.b: {{ b }}
+</div>
+<div exAttributeDirective foo="a" style="padding: 1em; border: 1px dotted salmon;">
+  <p>This element (outer element, really) has the directive as an attribute.</p>
+  a: {{ a }}<br />
+  $scope.foo = {{ foo }}<br />
+  $scope.x = {{ x }}
+</div>

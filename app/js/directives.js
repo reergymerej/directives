@@ -66,4 +66,25 @@ angular.module('myApp.directives', []).
         foo: '=x'
       }
     };
+  }])
+
+  .directive('exAttributeDirective', [function () {
+    return {
+      restrict: 'A',
+      templateUrl: 'templates/ex-attribute-directive.html',
+      scope: {
+        foo: '=foo'
+      }
+    };
+  }])
+
+  .directive('donkey', [function () {
+    return {
+      restrict: 'E',
+      templateUrl: 'templates/ex-transclude.html',
+      transclude: true,
+      scope: {
+        x: '='
+      }
+    };
   }]);

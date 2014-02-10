@@ -29,5 +29,15 @@ config(['$routeProvider', function($routeProvider) {
     controller: 'IsolatedCtrl'
   });
 
+  $routeProvider.when('/isolated-attr', {
+    templateUrl: 'partials//isolated-attr.html',
+    controller: 'IsolatedAttrCtrl'
+  });
+
+  $routeProvider.when('/transclude', {
+    templateUrl: 'partials/transclude.html',
+    controller: 'TranscludeCtrl'
+  });
+
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

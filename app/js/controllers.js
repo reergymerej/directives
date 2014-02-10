@@ -26,4 +26,14 @@ angular.module('myApp.controllers', [])
     $scope.a = 'aaa';
     $scope.b = 'bbb';
     $scope.c = 'ccc';
+  }])
+
+  .controller('IsolatedAttrCtrl', ['$scope', function ($scope) {
+    $scope.a = 'aaa';
+    $scope.b = 'bbb';
+  }])
+
+  .controller('TranscludeCtrl', ['$scope', function ($scope) {
+    $scope.foo = 'Foo in TranscludeCtrl';
+    $scope.donkey = 'Donkey in TranscludeCtrl';
   }]);
