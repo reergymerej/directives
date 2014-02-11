@@ -36,4 +36,9 @@ angular.module('myApp.controllers', [])
   .controller('TranscludeCtrl', ['$scope', function ($scope) {
     $scope.foo = 'Foo in TranscludeCtrl';
     $scope.donkey = 'Donkey in TranscludeCtrl';
+  }])
+
+  .controller('FormsCtrl', ['$scope', function ($scope) {
+    $scope.foo = 'hello';
+    $scope.master = {};
   }]);

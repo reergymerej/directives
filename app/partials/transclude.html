@@ -2,6 +2,7 @@
 <p>This shows how to use a directive to shove stuff from the view into the template.</p>
 controller's foo: {{ foo }}
 
+<p>Below is the directive reference.  The attribute <strong>x="donkey"</strong> makes "x" available in the template with the value "donkey" from the controller.
 <donkey x="donkey">
   <p>This text was written in the view, within the directive reference.  It will be injected (transcluded) into the directive's template. I can access the controller, right? {{ foo }}</p>
   <p>What about x? {{ x }}</p>

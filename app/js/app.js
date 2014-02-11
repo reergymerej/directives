@@ -39,5 +39,10 @@ config(['$routeProvider', function($routeProvider) {
     controller: 'TranscludeCtrl'
   });
 
+  $routeProvider.when('/forms', {
+    templateUrl: 'partials/forms/forms.html',
+    controller: 'FormsCtrl'
+  });
+
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
